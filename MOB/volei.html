@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luiz - Volei</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programacao.html">Programação</a></li>
+                <li><a href="volei.html" class="active">Volei</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="volei">
+        <h1>Volei</h1>
+        <p>Aqui vai uma seção sobre meu amor pelo volei!</p>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleThemeButton = document.createElement('button');
+            toggleThemeButton.textContent = 'Alternar Tema';
+            toggleThemeButton.classList.add('theme-toggle');
+            document.body.appendChild(toggleThemeButton);
+        
+            toggleThemeButton.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+            });
+        });
+    </script>
+</body>
+</html>
